@@ -25,19 +25,6 @@ extension OnboardEmail {
 
 // MARK: - Actions
 extension OnboardEmail {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.emailField.delegate = self
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShow(_:)),
-                                               name: NSNotification.Name.UIKeyboardWillShow,
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHide(_:)),
-                                               name: NSNotification.Name.UIKeyboardWillHide,
-                                               object: nil)
-    }
     
     @IBAction func showPrivacyPolicy(_ sender: Any) {
         self.showPrivacy()

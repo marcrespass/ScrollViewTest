@@ -26,6 +26,11 @@
 		D308903E1ED77B6100C41852 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30890391ED77B6100C41852 /* Priority.swift */; };
 		D30890401ED77BA600C41852 /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308903F1ED77BA600C41852 /* Controls.swift */; };
 		D30890431ED77D8C00C41852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30890031ED779A900C41852 /* AppDelegate.swift */; };
+		D3BD196E1ED79E5D000A2217 /* Anchorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30890351ED77B6100C41852 /* Anchorage.swift */; };
+		D3BD196F1ED79E5D000A2217 /* AnchorGroupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30890361ED77B6100C41852 /* AnchorGroupProvider.swift */; };
+		D3BD19701ED79E5D000A2217 /* Compatability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30890371ED77B6100C41852 /* Compatability.swift */; };
+		D3BD19711ED79E5D000A2217 /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30890381ED77B6100C41852 /* Internal.swift */; };
+		D3BD19721ED79E5D000A2217 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30890391ED77B6100C41852 /* Priority.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -252,6 +257,11 @@
 			files = (
 				D308902D1ED77A4800C41852 /* OnboardEmail+Extensions.swift in Sources */,
 				D30890431ED77D8C00C41852 /* AppDelegate.swift in Sources */,
+				D3BD19701ED79E5D000A2217 /* Compatability.swift in Sources */,
+				D3BD19721ED79E5D000A2217 /* Priority.swift in Sources */,
+				D3BD196E1ED79E5D000A2217 /* Anchorage.swift in Sources */,
+				D3BD19711ED79E5D000A2217 /* Internal.swift in Sources */,
+				D3BD196F1ED79E5D000A2217 /* AnchorGroupProvider.swift in Sources */,
 				D30890291ED77A4800C41852 /* NibbyOnboardEmail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +446,7 @@
 				D30890141ED779A900C41852 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D308901D1ED77A1600C41852 /* Build configuration list for PBXNativeTarget "NibbyScrollViewTest" */ = {
 			isa = XCConfigurationList;

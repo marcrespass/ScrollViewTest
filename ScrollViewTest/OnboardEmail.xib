@@ -13,9 +13,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardEmail" customModule="NibbyScrollViewTest" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="W9o-jh-0fY" id="c7B-ZM-XdL"/>
                 <outlet property="emailField" destination="1CF-Uo-f7n" id="VKC-CI-EFm"/>
+                <outlet property="infoView" destination="Dg3-IZ-dem" id="Tly-cB-sY8"/>
+                <outlet property="noButton" destination="nAn-BM-zdj" id="erD-Hb-pbA"/>
                 <outlet property="scrollView" destination="eMs-qG-nHQ" id="tUS-2C-StK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="7HP-kZ-6Pu"/>
+                <outlet property="yesButton" destination="ieF-55-uIh" id="pYy-hc-eJA"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -121,15 +125,15 @@
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="ieF-55-uIh" firstAttribute="top" secondItem="Osx-ap-Bch" secondAttribute="bottom" constant="8" symbolic="YES" id="CTD-Mv-iaW"/>
-                                        <constraint firstItem="nAn-BM-zdj" firstAttribute="width" secondItem="Dg3-IZ-dem" secondAttribute="width" id="DHP-Ib-0QH"/>
-                                        <constraint firstItem="nAn-BM-zdj" firstAttribute="top" secondItem="ieF-55-uIh" secondAttribute="bottom" id="DXS-bF-M58"/>
-                                        <constraint firstItem="ieF-55-uIh" firstAttribute="centerX" secondItem="Dg3-IZ-dem" secondAttribute="centerX" id="EdK-u0-yrz"/>
+                                        <constraint firstItem="nAn-BM-zdj" firstAttribute="width" secondItem="Dg3-IZ-dem" secondAttribute="width" placeholder="YES" id="DHP-Ib-0QH"/>
+                                        <constraint firstItem="nAn-BM-zdj" firstAttribute="top" secondItem="ieF-55-uIh" secondAttribute="bottom" placeholder="YES" id="DXS-bF-M58"/>
+                                        <constraint firstItem="ieF-55-uIh" firstAttribute="centerX" secondItem="Dg3-IZ-dem" secondAttribute="centerX" placeholder="YES" id="EdK-u0-yrz"/>
                                         <constraint firstItem="Osx-ap-Bch" firstAttribute="top" secondItem="1CF-Uo-f7n" secondAttribute="bottom" id="FW0-fE-Hyb"/>
-                                        <constraint firstItem="nAn-BM-zdj" firstAttribute="centerX" secondItem="Dg3-IZ-dem" secondAttribute="centerX" id="IEd-xF-thC"/>
+                                        <constraint firstItem="nAn-BM-zdj" firstAttribute="centerX" secondItem="Dg3-IZ-dem" secondAttribute="centerX" placeholder="YES" id="IEd-xF-thC"/>
                                         <constraint firstItem="1CF-Uo-f7n" firstAttribute="width" secondItem="Dg3-IZ-dem" secondAttribute="width" constant="-20" id="K5m-cw-Vne"/>
                                         <constraint firstItem="Osx-ap-Bch" firstAttribute="centerX" secondItem="1CF-Uo-f7n" secondAttribute="centerX" id="KRG-48-UGD"/>
-                                        <constraint firstAttribute="bottom" secondItem="nAn-BM-zdj" secondAttribute="bottom" id="QNk-fy-d9H"/>
-                                        <constraint firstItem="ieF-55-uIh" firstAttribute="width" secondItem="Dg3-IZ-dem" secondAttribute="width" id="RSy-rq-gIi"/>
+                                        <constraint firstAttribute="bottom" secondItem="nAn-BM-zdj" secondAttribute="bottom" placeholder="YES" id="QNk-fy-d9H"/>
+                                        <constraint firstItem="ieF-55-uIh" firstAttribute="width" secondItem="Dg3-IZ-dem" secondAttribute="width" placeholder="YES" id="RSy-rq-gIi"/>
                                         <constraint firstItem="5Eh-VH-2UD" firstAttribute="top" secondItem="Dg3-IZ-dem" secondAttribute="top" constant="12" id="XM4-Zw-OnA"/>
                                         <constraint firstItem="5Eh-VH-2UD" firstAttribute="centerX" secondItem="Dg3-IZ-dem" secondAttribute="centerX" id="aHx-bE-jTd"/>
                                         <constraint firstItem="5Eh-VH-2UD" firstAttribute="width" secondItem="Dg3-IZ-dem" secondAttribute="width" constant="-20" id="bmw-JD-QJB"/>
@@ -164,15 +168,15 @@
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="BgT-pK-XOP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5L5-hx-0Sr"/>
-                <constraint firstAttribute="bottom" secondItem="W9o-jh-0fY" secondAttribute="bottom" constant="20" id="6VU-Ou-QM3"/>
-                <constraint firstItem="W9o-jh-0fY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" symbolic="YES" id="CQZ-dV-TWk"/>
-                <constraint firstItem="W9o-jh-0fY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="TrJ-s3-nMU"/>
+                <constraint firstAttribute="bottom" secondItem="W9o-jh-0fY" secondAttribute="bottom" constant="20" placeholder="YES" id="6VU-Ou-QM3"/>
+                <constraint firstItem="W9o-jh-0fY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" symbolic="YES" placeholder="YES" id="CQZ-dV-TWk"/>
+                <constraint firstItem="W9o-jh-0fY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" placeholder="YES" id="TrJ-s3-nMU"/>
                 <constraint firstItem="BgT-pK-XOP" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="kCE-HP-7xa"/>
-                <constraint firstAttribute="trailing" secondItem="W9o-jh-0fY" secondAttribute="trailing" constant="20" symbolic="YES" id="nkp-F9-KyJ"/>
+                <constraint firstAttribute="trailing" secondItem="W9o-jh-0fY" secondAttribute="trailing" constant="20" symbolic="YES" placeholder="YES" id="nkp-F9-KyJ"/>
                 <constraint firstItem="BgT-pK-XOP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="sqb-qf-Ikc"/>
                 <constraint firstItem="BgT-pK-XOP" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="vLR-K0-w45"/>
             </constraints>
-            <point key="canvasLocation" x="-80" y="53"/>
+            <point key="canvasLocation" x="-86" y="56"/>
         </view>
     </objects>
     <resources>
