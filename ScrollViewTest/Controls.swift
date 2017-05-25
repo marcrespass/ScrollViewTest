@@ -28,6 +28,7 @@ extension UILabel {
 extension UIButton {
     convenience init(title: String) {
         self.init(type: .custom)
+        
         self.titleLabel?.lineBreakMode = .byTruncatingMiddle
         self.isOpaque = false
         self.titleLabel?.font = UIFont.systemFont(ofSize: 18)
@@ -36,3 +37,21 @@ extension UIButton {
     }
 }
 
+extension UITextField {
+    convenience init(placeholder: String) {
+        self.init()
+        
+        self.textAlignment = .center
+        self.borderStyle = .roundedRect
+        self.clearButtonMode = .whileEditing
+        self.minimumFontSize = 17
+        self.placeholder = placeholder
+        self.contentHorizontalAlignment = .left
+        self.isOpaque = false
+        self.clipsToBounds = true
+        self.textColor = nil
+        self.font = .systemFont(ofSize: 17)
+        self.keyboardType = .emailAddress
+        self.returnKeyType = .done
+    }
+}

@@ -50,8 +50,9 @@ final class OnboardEmail: UIViewController {
     
     lazy var infoView: UIView = {
         let infoView = UIView()
-        infoView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        infoView.translatesAutoresizingMaskIntoConstraints = false
+        infoView.backgroundColor = .white
+        
+        //        infoView.translatesAutoresizingMaskIntoConstraints = false
         return infoView
     }()
     
@@ -61,7 +62,7 @@ final class OnboardEmail: UIViewController {
         imageView.setContentHuggingPriority(251, for: .horizontal)
         imageView.setContentHuggingPriority(251, for: .vertical)
         imageView.widthAnchor == 80
-        imageView.widthAnchor == imageView.heightAnchor
+        imageView.heightAnchor == imageView.widthAnchor
         
         return imageView
     }()
@@ -129,20 +130,7 @@ final class OnboardEmail: UIViewController {
     }()
     
     lazy var emailField: UITextField = {
-        let field = UITextField()
-        field.textAlignment = .center
-        field.borderStyle = .roundedRect
-        field.clearButtonMode = .whileEditing
-        field.minimumFontSize = 17
-        field.placeholder = "Enter Your Email Address"
-        field.contentHorizontalAlignment = .left
-        field.isOpaque = false
-        field.clipsToBounds = true
-        field.textColor = nil
-        field.font = .systemFont(ofSize: 17)
-        field.keyboardType = .emailAddress
-        field.returnKeyType = .done
-        
+        let field = UITextField(placeholder: "Enter Your Email Address")
         field.setContentHuggingPriority(251, for: .vertical)
         field.setContentCompressionResistancePriority(751, for: .vertical)
 
@@ -150,11 +138,8 @@ final class OnboardEmail: UIViewController {
     }()
     
     fileprivate lazy var privacyPolicyButton: UIButton = {
-        let button = UIButton(type: .custom)
-        button.titleLabel?.lineBreakMode = .byTruncatingMiddle
-        button.isOpaque = false
+        let button = UIButton(title: "Privacy Policy")
         button.titleLabel?.font = .systemFont(ofSize: 11)
-        button.setTitle("Privacy Policy", for: .normal)
         button.setTitleColor(self.mainView.tintColor, for: .normal)
 
         button.addTarget(self, action: #selector(showPrivacyPolicy(_:)), for: .touchUpInside)
@@ -220,17 +205,21 @@ extension OnboardEmail {
         self.configureConstraints()
     }
     
+    func contentViewConstraints() {
+        let inset = UIDevice.current.userInterfaceIdiom == .pad ? 100.0 : 20.0
+        contentView.topAnchor == mainView.topAnchor + inset
+        contentView.bottomAnchor == mainView.bottomAnchor - inset
+        contentView.leadingAnchor == mainView.leadingAnchor + inset
+        contentView.trailingAnchor == mainView.trailingAnchor - inset
+    }
+    
     func configureConstraints() {
         backgroundImageView.centerXAnchor == mainView.centerXAnchor
         backgroundImageView.heightAnchor == mainView.heightAnchor
         backgroundImageView.widthAnchor == mainView.widthAnchor
         backgroundImageView.centerYAnchor == mainView.centerYAnchor
         
-        let inset = UIDevice.current.userInterfaceIdiom == .pad ? 100.0 : 20.0
-        contentView.topAnchor == mainView.topAnchor + inset
-        contentView.bottomAnchor == mainView.bottomAnchor - inset
-        contentView.leadingAnchor == mainView.leadingAnchor + inset
-        contentView.trailingAnchor == mainView.trailingAnchor - inset
+        self.contentViewConstraints()
         
         headerView.topAnchor == contentView.topAnchor
         headerView.leadingAnchor == contentView.leadingAnchor
@@ -289,4 +278,18 @@ extension OnboardEmail {
         scrollView.trailingAnchor == contentView.trailingAnchor
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.emailField.delegate = self
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow(_:)),
+                                               name: NSNotification.Name.UIKeyboardWillShow,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide(_:)),
+                                               name: NSNotification.Name.UIKeyboardWillHide,
+                                               object: nil)
+    }
+
 }
