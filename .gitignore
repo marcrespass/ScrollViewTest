@@ -1,0 +1,21 @@
+## IntelliJ
+.idea
+*.iml
+target
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+## APPLE
+*.DS_Store
+.LSOverride
+
+## SUBVERSION
+.svn
+
+## XCODE
+*.[Ff]ramework/
+build
+xcuserdata
+*.xcworkspace
